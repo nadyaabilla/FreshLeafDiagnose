@@ -77,7 +77,8 @@ async function uploadFile(formData) {
     const fakeResponse = {
       diseaseName: 'Hawar Daun',
       diseaseDetails: 'Hawar daun adalah penyakit yang menyerang tanaman padi, menyebabkan bercak coklat pada daun. Penyakit ini disebabkan oleh bakteri Xanthomonas oryzae.',
-      preventionAndTreatment: 'Pencegahan: Gunakan varietas tahan penyakit dan tanam pada musim yang sesuai. Pengobatan: Gunakan fungisida yang direkomendasikan dan perbaiki sistem irigasi.'
+      prevention: 'Pencegahan: Gunakan varietas tahan penyakit dan tanam pada musim yang sesuai.',
+      treatment: ' Pengobatan: Gunakan fungisida yang direkomendasikan dan perbaiki sistem irigasi.'
     };
 
     // Simulasi delay respons API
@@ -93,13 +94,15 @@ async function uploadFile(formData) {
 }
 
 // Show prediction result
-function showPredictionResult({ diseaseName, diseaseDetails, preventionAndTreatment }) {
+function showPredictionResult({ diseaseName, diseaseDetails, prevention, treatment }) {
   result.style.display = 'block';
   result.innerHTML = `
     <strong>Nama Penyakit:</strong> ${diseaseName}<br />
     <strong>Detail Penyakit:</strong><br />
     <p>${diseaseDetails}</p>
-    <strong>Cara Mengatasi & Pencegahan:</strong><br />
-    <p>${preventionAndTreatment}</p>
+    <strong>Cara Mengatasi:</strong><br />
+    <p>${prevention}</p>
+    <strong>Cara Pencegahan:</strong><br />
+    <p>${treatment}</p>
   `;
 }

@@ -1,5 +1,16 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 150px;
+  }
+}
+
 *,
-*::after,
+*::after
 *::before {
   box-sizing: border-box;
   margin: 0;
@@ -36,6 +47,18 @@
   color: #197e0b;
 }
 
+.btn-light-v2 {
+  font-weight: bold;
+  color: white;
+  background-color: #197e0b;
+}
+
+.btn-light-v2:hover {
+  font-weight: bold;
+  color: #197e0b;
+  border: solid 1px #197e0b;
+}
+
 .btn-light:hover {
   font-weight: bold;
   color: white;
@@ -65,6 +88,7 @@
 .kontak {
     color: white;
     text-align: center;
+    margin-bottom: 5px;
 }
 
 .kontak a {
@@ -78,11 +102,14 @@
   gap: 24px;
 }
 
+.border-dashed {
+  border:  5px dashed #197e0b;
+  border-radius: 12px;
+}
+
 #dropArea {
   margin-block-end: 16px;
   padding: 20px;
-  border: 2px dashed #197e0b;
-  border-radius: 12px;
   background-color: white;
   color: black;
 
@@ -104,15 +131,6 @@
   width: 20%;
 }
 
-#dropArea {
-  border: 2px dashed #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  background-color: #f9f9f9;
-  margin-top: 10px;
-  cursor: pointer;
-}
 #dropArea.dragover {
   background-color: #e9f7ef;
   border-color: #28a745;
